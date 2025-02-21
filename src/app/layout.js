@@ -2,6 +2,7 @@
 import { usePathname } from "next/navigation";
 // import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/ui/Navbar";
 
 // export const metadata = {
 //   title: "Create Next App",
@@ -12,7 +13,10 @@ export default function RootLayout({ children }) {
   const pathname = usePathname();
   return (
     <html lang="en">
-      <body className="bg-slate-900 text-white">{children}</body>
+      <body className="bg-slate-900 text-white">
+        {children}
+        <Navbar />
+      </body>
     </html>
   );
 }

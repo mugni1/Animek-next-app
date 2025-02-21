@@ -1,14 +1,13 @@
 "use client";
-import Navbar from "@/components/ui/Navbar";
+import Container from "@/components/ui/Container";
 import { useState } from "react";
 
 export default function HomeContentPage() {
   const [navigate, setNavigate] = useState("recomendation");
 
   return (
-    <main className=" w-full container mx-auto pt-20 gap-5 flex flex-col">
-      <h1>INi Home</h1>
-      <nav className=" w-full overflow-x-auto flex gap-5">
+    <Container>
+      <nav className=" w-full overflow-x-auto flex gap-5 scrollbar-hide">
         <button
           onClick={() => setNavigate("recomendation")}
           className={`border py-2 px-5 font-semibold ${
@@ -53,8 +52,6 @@ export default function HomeContentPage() {
           schedutiles
         </h1>
       )}
-
-      <Navbar />
-    </main>
+    </Container>
   );
 }
