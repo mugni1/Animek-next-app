@@ -16,7 +16,6 @@ async function getAnimesSchedule() {
 
 export default async function ReleasePage() {
   const animes = await getAnimesSchedule();
-  console.log(animes);
   return (
     <Container>
       {animes.map((item, index) => (

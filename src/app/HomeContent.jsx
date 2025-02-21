@@ -33,7 +33,6 @@ export default function HomeContentPage() {
       url: "https://nimeku-api.vercel.app/api/recommend",
     })
       .then((res) => {
-        console.log(res.data);
         setAnimes(res.data);
       })
       .catch((err) => {
