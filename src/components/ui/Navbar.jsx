@@ -33,9 +33,9 @@ export default function Navbar() {
         <li>
           <Link
             className={` py-2 px-2 rounded-lg transition-all text-white flex ${
-              pathName == "/schedutyles" && "bg-emerald-500 text-slate-800"
+              pathName == "/release-schedule" && "bg-emerald-500 text-slate-800"
             }`}
-            href="/schedutyles"
+            href="/release-schedule"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

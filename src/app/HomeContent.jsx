@@ -2,54 +2,119 @@
 import Btn from "@/components/ui/Button";
 import CardAnime from "@/components/ui/CardAnime";
 import Container from "@/components/ui/Container";
-import { useState } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 export default function HomeContentPage() {
-  const [navigate, setNavigate] = useState("recomendation");
+  const [navigate, setNavigate] = useState("recommend");
+  const [animes, setAnimes] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios({
+      method: "get",
+      url: "https://nimeku-api.vercel.app/api/" + navigate,
+    })
+      .then((res) => {
+        console.log(res.data);
+        setAnimes(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [navigate]);
+
+  useEffect(() => {
+    axios({
+      method: "get",
+      url: "https://nimeku-api.vercel.app/api/recommend",
+    })
+      .then((res) => {
+        console.log(res.data);
+        setAnimes(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <Container>
-      <nav className=" w-full overflow-x-auto flex gap-5 scrollbar-hide">
+      <header className="text-3xl font-semibold w-full text-center mb-5 flex flex-col gap-5">
+        <span className="bg-gradient-to-br  from-green-400 to-emerald-600 text-transparent bg-clip-text">
+          NONTON ANIMEK
+        </span>
+        <hr />
+      </header>
+
+      <nav className=" w-full overflow-x-auto flex gap-5 scrollbar-hide mb-5">
         <Btn
           className={`${
-            navigate == "recomendation" && "bg-emerald-600 text-white "
+            navigate == "recommend" &&
+            "bg-gradient-to-br  from-green-400 to-emerald-600  "
           }`}
-          onClick={() => setNavigate("recomendation")}
+          onClick={() => setNavigate("recommend")}
         >
           Recomendation
         </Btn>
         <Btn
-          className={`${navigate == "trending" && "bg-emerald-600 text-white"}`}
-          onClick={() => setNavigate("trending")}
+          className={`${
+            navigate == "new" &&
+            "bg-gradient-to-br  from-green-400 to-emerald-600  "
+          }`}
+          onClick={() => setNavigate("new")}
         >
-          Trending
+          New Release
+        </Btn>
+        <Btn
+          className={`${
+            navigate == "ongoing" &&
+            "bg-gradient-to-br  from-green-400 to-emerald-600 "
+          }`}
+          onClick={() => setNavigate("ongoing")}
+        >
+          Ongoing
+        </Btn>
+        <Btn
+          className={`${
+            navigate == "completed" &&
+            "bg-gradient-to-br  from-green-400 to-emerald-600  "
+          }`}
+          onClick={() => setNavigate("completed")}
+        >
+          Completed
         </Btn>
       </nav>
 
-      {navigate == "recomendation" && (
-        <h1 className="w-full text-center text-3xl font-semibold my-20">
-          🗓️ Recomendation
-        </h1>
-      )}
-      {navigate == "trending" && (
-        <h1 className="w-full text-center text-3xl font-semibold my-20">
-          🔥 Trending
-        </h1>
-      )}
-      {navigate == "schedutiles" && (
-        <h1 className="w-full text-center text-3xl font-semibold my-20">
-          schedutiles
-        </h1>
-      )}
-
-      <section className="w-full grid grid-cols-2 gap-5">
-        <CardAnime />
-        <CardAnime />
-        <CardAnime />
-        <CardAnime />
-        <CardAnime />
-        <CardAnime />
-        <CardAnime />
+      <section className="w-full grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7 gap-5">
+        {loading ? (
+          <h1 className="font-semibold text-2xl w-full text-center">
+            Please wait...
+          </h1>
+        ) : animes.length < 1 ? (
+          "No data"
+        ) : (
+          animes.map((anime, index) => (
+            <CardAnime
+              title={anime.title}
+              status={anime?.status}
+              imgSrc={
+                navigate == "recommend" || navigate == "ongoing"
+                  ? anime.image
+                  : anime.imageUrl
+              }
+              episode={anime?.episodeNumber}
+              type={anime?.type}
+              key={index}
+            />
+          ))
+        )}
       </section>
     </Container>
   );
