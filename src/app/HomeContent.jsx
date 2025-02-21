@@ -1,5 +1,6 @@
 "use client";
 import Btn from "@/components/ui/Button";
+import CardAnime from "@/components/ui/CardAnime";
 import Container from "@/components/ui/Container";
 import { useState } from "react";
 
@@ -40,6 +41,16 @@ export default function HomeContentPage() {
           schedutiles
         </h1>
       )}
+
+      <section className="w-full grid grid-cols-2 gap-5">
+        <CardAnime />
+        <CardAnime />
+        <CardAnime />
+        <CardAnime />
+        <CardAnime />
+        <CardAnime />
+        <CardAnime />
+      </section>
     </Container>
   );
 }
