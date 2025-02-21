@@ -5,11 +5,8 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const pathName = usePathname();
   return (
-    <header className="w-full h-20 shadow-md fixed z-50  bg-white">
-      <nav className="container mx-auto flex justify-between items-center h-full">
-        <Link className="font-bold " href="/">
-          Brand
-        </Link>
+    <header className="shadow-md fixed bottom-5 right-5 left-5 border z-50 bg-white p-5">
+      <nav className="container mx-auto flex items-center h-full">
         <ul className="flex gap-5">
           <li>
             <Link

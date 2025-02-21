@@ -1,7 +1,8 @@
 "use client";
+import Navbar from "@/components/ui/Navbar";
 import { useState } from "react";
 
-export default function ContentPage() {
+export default function HomeContentPage() {
   const [navigate, setNavigate] = useState("recomendation");
 
   return (
@@ -52,6 +53,8 @@ export default function ContentPage() {
           schedutiles
         </h1>
       )}
+
+      <Navbar />
     </main>
   );
 }
