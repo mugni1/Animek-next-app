@@ -100,6 +100,7 @@ export default function HomeContentPage() {
         ) : (
           animes.map((anime, index) => (
             <CardAnime
+              detail={anime.href.split("/").filter(Boolean).pop()}
               title={anime.title}
               status={anime?.status}
               imgSrc={

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function CardAnime({
   imgSrc = "/vercel.svg",
   title = "No title",
@@ -7,7 +9,10 @@ export default function CardAnime({
   detail = "",
 }) {
   return (
-    <div className="columns-1 rounded-xl overflow-hidden">
+    <Link
+      href={"/detail/" + detail}
+      className="columns-1 rounded-xl overflow-hidden"
+    >
       {/* card header  */}
       <div className="h-60 w-full overflow-hidden relative">
         <img src={imgSrc} className="object-cover object-center" alt="image" />
@@ -29,6 +34,6 @@ export default function CardAnime({
         <span className="opacity-50">{episode}</span>
       </div>
       {/* end card body  */}
-    </div>
+    </Link>
   );
 }

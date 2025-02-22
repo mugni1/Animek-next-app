@@ -25,6 +25,7 @@ export default function ListEpisode({ day = "Day", animes = [] }) {
             className="rounded-xl flex flex-col gap-5 py-3 pe-3 bg-slate-600 bg-opacity-30 backdrop-blur-sm overflow-hidden"
           >
             <div className="w-full rounded-xl flex items-center gap-4">
+              {/* card image  */}
               <div className="h-28 w-4/12 flex items-center justify-center">
                 <img
                   src={item.imageUrl}
@@ -32,13 +33,15 @@ export default function ListEpisode({ day = "Day", animes = [] }) {
                   className="object-cover object-center w-full"
                 />
               </div>
+              {/* end card image  */}
+              {/* card body  */}
               <div className="flex flex-col gap-1 w-8/12">
                 <h1 className="line-clamp-1 font-semibold">{item.title}</h1>
                 <span className="line-clamp-1 text-sm">
                   Episode {item.episode}
                 </span>
                 <Link
-                  className="bg-gradient-to-br  from-green-400 to-emerald-600  px-2 py-1 text-sm rounded-xl font-semibold w-fit flex items-center gap-1"
+                  className="bg-gradient-to-br from-green-400 to-emerald-600 p-1 pe-3 text-sm font-semibold w-fit flex items-center gap-1 rounded-full"
                   href=""
                 >
                   <svg
@@ -56,6 +59,7 @@ export default function ListEpisode({ day = "Day", animes = [] }) {
                   <span>Watch anime</span>
                 </Link>
               </div>
+              {/* end card body  */}
             </div>
           </section>
         ))}
