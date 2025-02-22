@@ -1,6 +1,5 @@
 import Container from "@/components/ui/Container";
 import ListEpisode from "./ListEpisode";
-import axios from "axios";
 
 async function getAnimesSchedule() {
   try {

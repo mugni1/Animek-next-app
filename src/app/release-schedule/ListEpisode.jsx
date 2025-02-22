@@ -42,7 +42,7 @@ export default function ListEpisode({ day = "Day", animes = [] }) {
                 </span>
                 <Link
                   className="bg-gradient-to-br from-green-400 to-emerald-600 p-1 pe-3 text-sm font-semibold w-fit flex items-center gap-1 rounded-full"
-                  href=""
+                  href={"/detail/" + item.url.split("/").filter(Boolean).pop()}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
