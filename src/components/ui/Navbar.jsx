@@ -82,10 +82,10 @@ export default function Navbar() {
         <li>
           <Link
             className={` py-2 px-2 rounded-lg transition-all text-white flex ${
-              pathName == "/schedutyles" &&
+              pathName == "/category" &&
               "bg-emerald-500 transition-all ease-in-out duration-300"
             }`}
-            href="/schedutyles"
+            href="/category"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -106,10 +106,10 @@ export default function Navbar() {
         <li>
           <Link
             className={` py-2 px-2 rounded-lg transition-all text-white flex ${
-              pathName == "/schedutyles" &&
+              pathName == "/show-category" &&
               "bg-emerald-500 transition-all ease-in-out duration-300"
             }`}
-            href="/schedutyles"
+            href="/show-category"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +122,12 @@ export default function Navbar() {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z"
+                d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 6h.008v.008H6V6Z"
               />
             </svg>
           </Link>

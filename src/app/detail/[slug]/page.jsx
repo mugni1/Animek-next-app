@@ -181,7 +181,10 @@ export default async function animeDetailPage({ params }) {
               <Link
                 key={index}
                 className="columns-1 border rounded-lg p-2 h-fit flex items-center gap-2"
-                href={`detail/${episode.url.split("/").filter(Boolean).pop()}`}
+                href={`/play-episode/${episode.url
+                  .split("/")
+                  .filter(Boolean)
+                  .pop()}`}
               >
                 <div className="text-emerald-400">
                   <svg
