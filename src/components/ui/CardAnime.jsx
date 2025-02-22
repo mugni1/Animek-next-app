@@ -29,9 +29,23 @@ export default function CardAnime({
       {/* edn card header  */}
       {/* card body  */}
       <div className=" py-2 flex flex-col gap-1">
-        <h2 className="line-clamp-1">{title}</h2>
-        <span className="opacity-50">{status}</span>
-        <span className="opacity-50">{episode}</span>
+        <h2 className="line-clamp-1 font-semibold">{title}</h2>
+        {status != null && status != "" && (
+          <span className="flex justify-between items-center">
+            <span className="text-slate-500">{status}</span>
+            <span
+              className={`w-2 h-2 rounded-full ${
+                status == "Ongoing" ? "bg-green-500" : "bg-red-500"
+              } `}
+            ></span>
+          </span>
+        )}
+        {episode != null && episode != "" && (
+          <span className="flex justify-between items-center">
+            <span className="text-slate-500">{episode}</span>
+            <span className={`w-2 h-2 rounded-full bg-red-500`}></span>
+          </span>
+        )}
       </div>
       {/* end card body  */}
     </Link>

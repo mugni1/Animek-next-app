@@ -10,7 +10,7 @@ export default function LoadingAnimek() {
           {/* card body  */}
           <div className=" py-2 flex flex-col gap-1 w-full">
             <h2 className="w-full h-6 bg-slate-600 rounded-full"></h2>
-            <span className="w-full h-4 bg-slate-600 rounded-full"></span>
+            <span className="w-full h-6 bg-slate-600 rounded-full"></span>
           </div>
           {/* end card body  */}
         </div>
