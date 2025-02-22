@@ -58,10 +58,10 @@ export default function Navbar() {
         <li>
           <Link
             className={` py-2 px-2 rounded-lg transition-all text-white flex ${
-              pathName == "/schedutyles" &&
+              pathName == "/search" &&
               "bg-emerald-500 transition-all ease-in-out duration-300"
             }`}
-            href="/schedutyles"
+            href="/search"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -82,10 +82,10 @@ export default function Navbar() {
         <li>
           <Link
             className={` py-2 px-2 rounded-lg transition-all text-white flex ${
-              pathName == "/category" &&
+              pathName == "/search" &&
               "bg-emerald-500 transition-all ease-in-out duration-300"
             }`}
-            href="/category"
+            href="/search"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -106,10 +106,10 @@ export default function Navbar() {
         <li>
           <Link
             className={` py-2 px-2 rounded-lg transition-all text-white flex ${
-              pathName == "/show-category" &&
+              pathName == "/search" &&
               "bg-emerald-500 transition-all ease-in-out duration-300"
             }`}
-            href="/show-category"
+            href="/search"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
