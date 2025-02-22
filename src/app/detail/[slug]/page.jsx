@@ -143,7 +143,9 @@ export default async function animeDetailPage({ params }) {
             </svg>
             Duration
           </h1>
-          <p className="text-slate-200 text-justify">{anime.details.Durasi}</p>
+          <p className="text-slate-200 text-justify">
+            {anime.details?.Durasi || "Unknown"}
+          </p>
         </div>
         {/* end duration  */}
 
