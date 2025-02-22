@@ -10,7 +10,8 @@ export default function Navbar() {
         <li>
           <Link
             className={` py-2 px-2 rounded-lg transition-all text-white flex ${
-              pathName == "/" && "bg-emerald-500 text-slate-800"
+              pathName == "/" &&
+              "bg-emerald-500 transition-all ease-in-out duration-300"
             }`}
             href="/"
           >
@@ -33,7 +34,8 @@ export default function Navbar() {
         <li>
           <Link
             className={` py-2 px-2 rounded-lg transition-all text-white flex ${
-              pathName == "/release-schedule" && "bg-emerald-500 text-slate-800"
+              pathName == "/release-schedule" &&
+              "bg-emerald-500 transition-all ease-in-out duration-300"
             }`}
             href="/release-schedule"
           >
@@ -56,7 +58,8 @@ export default function Navbar() {
         <li>
           <Link
             className={` py-2 px-2 rounded-lg transition-all text-white flex ${
-              pathName == "/schedutyles" && "bg-emerald-500 text-slate-800"
+              pathName == "/schedutyles" &&
+              "bg-emerald-500 transition-all ease-in-out duration-300"
             }`}
             href="/schedutyles"
           >
@@ -79,7 +82,8 @@ export default function Navbar() {
         <li>
           <Link
             className={` py-2 px-2 rounded-lg transition-all text-white flex ${
-              pathName == "/schedutyles" && "bg-emerald-500 text-slate-800"
+              pathName == "/schedutyles" &&
+              "bg-emerald-500 transition-all ease-in-out duration-300"
             }`}
             href="/schedutyles"
           >
@@ -102,7 +106,8 @@ export default function Navbar() {
         <li>
           <Link
             className={` py-2 px-2 rounded-lg transition-all text-white flex ${
-              pathName == "/schedutyles" && "bg-emerald-500 text-slate-800"
+              pathName == "/schedutyles" &&
+              "bg-emerald-500 transition-all ease-in-out duration-300"
             }`}
             href="/schedutyles"
           >
