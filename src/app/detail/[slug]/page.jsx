@@ -5,7 +5,7 @@ async function getAnime(slug) {
   try {
     const result = await fetch(
       "https://nimeku-api.vercel.app/api/anime-details/" + slug,
-      { cache: "force-cache", next: { revalidate: 60 * 30 } }
+      { cache: "force-cache", next: { revalidate: 60 * 60 } }
     );
     return result.json();
   } catch (error) {
@@ -19,11 +19,15 @@ export default async function animeDetailPage({ params }) {
   return (
     <Container>
       <section className="w-full flex flex-col gap-4 mb-20">
+        {/* img  */}
         <img
           src={anime.image}
           alt=""
           className="w-1/2 mx-auto rounded-xl border"
         />
+        {/* end img  */}
+
+        {/* ratting  */}
         <h2 className="w-full text-center font-semibold text-xl text-slate-300">
           <div className="flex justify-center line-clamp-1 gap-1">
             <span className="text-amber-500">
@@ -43,11 +47,15 @@ export default async function animeDetailPage({ params }) {
             <span>{anime.rating}</span>
           </div>
         </h2>
+        {/* end ratting  */}
 
+        {/* title  */}
         <h2 className="w-full text-center line-clamp-1 font-semibold text-2xl">
           {anime.title}
         </h2>
+        {/* end title  */}
 
+        {/* status dan tipe */}
         <div className="w-full grid grid-cols-2 gap-5 justify-center">
           <button className="columns-1 py-2 px-3 rounded-full bg-emerald-600 font-semibold text-white">
             Status : {anime.details.Status}
@@ -56,7 +64,9 @@ export default async function animeDetailPage({ params }) {
             Type : {anime.details.Type}
           </button>
         </div>
+        {/* end status dan type  */}
 
+        {/* synops  */}
         <div className="flex flex-col">
           <h1 className="font-semibold text-lg flex gap-1 items-center">
             <svg
@@ -71,7 +81,9 @@ export default async function animeDetailPage({ params }) {
           </h1>
           <p className="text-slate-200 text-justify">{anime.description}</p>
         </div>
+        {/* end synopsis  */}
 
+        {/* studio  */}
         <div className="flex flex-col">
           <h1 className="font-semibold text-lg flex gap-1">
             <svg
@@ -91,7 +103,9 @@ export default async function animeDetailPage({ params }) {
           </h1>
           <p className="text-slate-200 text-justify">{anime.details.Studio}</p>
         </div>
+        {/* end studio  */}
 
+        {/* season  */}
         <div className="flex flex-col">
           <h1 className="font-semibold text-lg flex gap-1 items-center">
             <svg
@@ -110,6 +124,9 @@ export default async function animeDetailPage({ params }) {
           </h1>
           <p className="text-slate-200 text-justify">{anime.details.Season}</p>
         </div>
+        {/* end season  */}
+
+        {/* duration  */}
         <div className="flex flex-col ">
           <h1 className="font-semibold text-lg flex items-center gap-1">
             <svg
@@ -128,6 +145,9 @@ export default async function animeDetailPage({ params }) {
           </h1>
           <p className="text-slate-200 text-justify">{anime.details.Durasi}</p>
         </div>
+        {/* end duration  */}
+
+        {/* Episode  */}
         <div className="flex flex-col">
           <h1 className="font-semibold text-lg flex items-center gap-1">
             <svg
@@ -148,6 +168,7 @@ export default async function animeDetailPage({ params }) {
             Total {anime.details.Episode}
           </p>
         </div>
+        {/* end episode  */}
 
         {/* list chapter  */}
         <section className="w-full rounded-xl shadow-md p-3 border flex flex-col bg-slate-600 bg-opacity-30">
