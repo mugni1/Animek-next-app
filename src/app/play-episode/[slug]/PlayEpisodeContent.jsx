@@ -3,6 +3,7 @@
 import Container from "@/components/ui/Container";
 import { useQuery } from "@tanstack/react-query";
 import IframePage from "./Iframe";
+import LoadingEpisode from "./Loading";
 
 async function getEpisode(param) {
   const result = await fetch(
@@ -20,7 +21,12 @@ export default function PlayEpisodeContent({ slug }) {
 
   console.log(data);
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading)
+    return (
+      <Container>
+        <LoadingEpisode />
+      </Container>
+    );
   return (
     <Container>
       <IframePage episode={data} />
