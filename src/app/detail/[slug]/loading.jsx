@@ -3,7 +3,7 @@ import Container from "@/components/ui/Container";
 export default function LoadingDetailPage() {
   return (
     <Container>
-      <section className="w-full flex flex-col gap-4 mb-20">
+      <section className="w-full flex flex-col gap-4">
         {/* img  */}
         <div className="w-1/2 h-60 mx-auto rounded-xl bg-slate-600"></div>
         {/* end img  */}
