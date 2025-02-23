@@ -10,8 +10,8 @@ export default function RootLayout({ children }) {
       <body className="bg-slate-900 text-white">
         <QueryClientProvider client={queryClient}>
           {children}
+          <Navbar />
         </QueryClientProvider>
-        <Navbar />
       </body>
     </html>
   );
