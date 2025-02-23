@@ -20,7 +20,7 @@ export default function HomeContentPage() {
         <Btn
           className={`${
             navigate == "recommend" &&
-            "bg-gradient-to-br  from-green-400 to-emerald-600  "
+            "bg-gradient-to-br from-green-400 to-sky-600  "
           }`}
           onClick={() => setNavigate("recommend")}
         >
@@ -28,8 +28,7 @@ export default function HomeContentPage() {
         </Btn>
         <Btn
           className={`${
-            navigate == "new" &&
-            "bg-gradient-to-br  from-green-400 to-emerald-600  "
+            navigate == "new" && "bg-gradient-to-br from-green-400 to-sky-600  "
           }`}
           onClick={() => setNavigate("new")}
         >
@@ -38,7 +37,7 @@ export default function HomeContentPage() {
         <Btn
           className={`${
             navigate == "ongoing" &&
-            "bg-gradient-to-br  from-green-400 to-emerald-600 "
+            "bg-gradient-to-br from-green-400 to-sky-600 "
           }`}
           onClick={() => setNavigate("ongoing")}
         >
@@ -47,7 +46,7 @@ export default function HomeContentPage() {
         <Btn
           className={`${
             navigate == "completed" &&
-            "bg-gradient-to-br  from-green-400 to-emerald-600  "
+            "bg-gradient-to-br from-green-400 to-sky-600  "
           }`}
           onClick={() => setNavigate("completed")}
         >

@@ -31,7 +31,7 @@ export default function HomeHeader() {
     lazyLoad: true,
   };
   return (
-    <section className="w-full mb-10 overflow-hidden">
+    <section className="w-full mb-5 overflow-hidden">
       <Slider {...settings}>
         {isLoading ? (
           <CardImageLoading />

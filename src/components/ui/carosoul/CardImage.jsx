@@ -8,7 +8,7 @@ export default function CardImage({
   return (
     <div className="h-60 w-full rounded-xl overflow-hidden relative">
       <div className="absolute bottom-0 left-0 right-0 top-0 backdrop-blur-sm backdrop-brightness-75 bg-gradient-to-b from-transparent to-slate-900/60">
-        <h1 className=" w-full bg-gradient-to-br from-green-300 to-sky-600 bg-clip-text text-transparent absolute bottom-20 right-5 left-5 font-bold text-2xl line-clamp-1">
+        <h1 className="bg-gradient-to-br from-green-300 to-sky-600 bg-clip-text text-transparent absolute bottom-20 w-full px-5 font-bold text-2xl line-clamp-1">
           {title}
         </h1>
         <Link

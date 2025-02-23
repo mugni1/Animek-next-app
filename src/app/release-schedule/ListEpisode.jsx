@@ -41,7 +41,7 @@ export default function ListEpisode({ day = "Day", animes = [] }) {
                   Episode {item.episode}
                 </span>
                 <Link
-                  className="bg-gradient-to-br from-green-400 to-emerald-600 p-1 pe-3 text-sm font-semibold w-fit flex items-center gap-1 rounded-full"
+                  className="bg-gradient-to-br from-green-300 to-sky-600 py-1 px-3 pe-3 text-sm font-semibold w-fit flex items-center gap-1 rounded-xl"
                   href={"/detail/" + item.url.split("/").filter(Boolean).pop()}
                 >
                   <svg
@@ -52,11 +52,11 @@ export default function ListEpisode({ day = "Day", animes = [] }) {
                   >
                     <path
                       fillRule="evenodd"
-                      d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z"
+                      d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z"
                       clipRule="evenodd"
                     />
                   </svg>
-                  <span>Watch anime</span>
+                  <span>Show detail</span>
                 </Link>
               </div>
               {/* end card body  */}
