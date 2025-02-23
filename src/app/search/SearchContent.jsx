@@ -20,11 +20,9 @@ export default function SearchContent() {
     })
       .then((res) => {
         setAnime(res.data);
-        console.log(res.data);
       })
       .catch((err) => {
         setError(true);
-        console.log(err);
       })
       .finally(() => {
         setLoading(false);
