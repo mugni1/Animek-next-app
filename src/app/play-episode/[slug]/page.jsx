@@ -1,7 +1,7 @@
 import PlayEpisodeContent from "./PlayEpisodeContent";
 
 export const metadata = {
-  title: "Play Episdoe",
+  title: "Animeki - Play Episdoe",
 };
 
 export default async function playEpisodePage({ params }) {

@@ -1,5 +1,10 @@
 import Container from "@/components/ui/Container";
 import ListEpisode from "./ListEpisode";
+import { metadata } from "../page";
+
+export const metadata = {
+  title: "Animeki - Release Schedule",
+};
 
 async function getAnimesSchedule() {
   try {

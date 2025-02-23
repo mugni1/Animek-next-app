@@ -1,5 +1,10 @@
 import Container from "@/components/ui/Container";
 import Link from "next/link";
+import { metadata } from "../../play-episode/[slug]/page";
+
+export const metadata = {
+  title: "Animeki - Detail",
+};
 
 async function getAnime(slug) {
   try {
