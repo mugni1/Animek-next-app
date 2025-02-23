@@ -11,6 +11,10 @@ export default function RootLayout({ children }) {
         <QueryClientProvider client={queryClient}>
           {children}
           <Navbar />
+          <footer className="w-full py-5 text-center flex flex-col items-center justify-center bg-slate-800">
+            <b>Made with ❤️ by {"AAM"}</b>
+            <i>Enjoy watching the anime</i>
+          </footer>
         </QueryClientProvider>
       </body>
     </html>

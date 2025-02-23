@@ -22,7 +22,7 @@ export default async function animeDetailPage({ params }) {
   const anime = await getAnime(slug);
   return (
     <Container>
-      <section className="w-full flex flex-col gap-4 mb-20">
+      <section className="w-full flex flex-col gap-4">
         {/* img  */}
         <img
           src={anime.image}
