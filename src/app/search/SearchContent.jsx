@@ -4,6 +4,7 @@ import Container from "@/components/ui/Container";
 import Title from "@/components/ui/Title";
 import axios from "axios";
 import ResultAnime from "./ResultAnime";
+import TItleMessage from "@/components/ui/search/TItleMessage";
 
 export default function SearchContent() {
   const [keyword, setKeyword] = useState("");
@@ -51,13 +52,10 @@ export default function SearchContent() {
             {loading ? "Loading..." : "Search"}
           </button>
         </form>
+
         {/* result  */}
         {error ? (
-          <section className="w-full flex justify-center items-center mt-20">
-            <h1 className="font-semibold text-2xl text-red-600">
-              Something went wrong
-            </h1>
-          </section>
+          <TItleMessage message={"Somethink Went Wrong"} />
         ) : (
           animes != null && <ResultAnime data={animes} />
         )}
