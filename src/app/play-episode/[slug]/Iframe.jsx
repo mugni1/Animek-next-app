@@ -19,6 +19,12 @@ export default function IframePage({ episode }) {
       </h1>
       {/* end title  */}
 
+      {/* note  */}
+      <i className="text-sm font-light mb-2 text-slate-400">
+        Note: Jika video tidak dapat di putar silahkan ganti server dengan yang
+        tersedia di bawah ini.
+      </i>
+      {/* edn note */}
       {/* list server  */}
       <div className="w-full flex flex-col gap-2 mb-4">
         <h2 className="font-semibold flex gap-1">
