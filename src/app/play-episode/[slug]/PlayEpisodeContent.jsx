@@ -19,8 +19,6 @@ export default function PlayEpisodeContent({ slug }) {
     staleTime: 1000 * 60 * 60,
   });
 
-  console.log(data);
-
   if (isLoading)
     return (
       <Container>
