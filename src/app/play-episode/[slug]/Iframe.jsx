@@ -86,7 +86,7 @@ export default function IframePage({ episode }) {
       {/* end information  */}
 
       <h2 className="font-semibold flex">Description</h2>
-      <span className="text-justify mb-20">
+      <span className="text-justify">
         {episode.iframeURL.seriesDescription}
       </span>
     </section>
