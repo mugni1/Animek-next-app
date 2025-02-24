@@ -13,7 +13,7 @@ const getAnimeOngoing = async () => {
 };
 
 export default function HomeHeader() {
-  const { data, isLoading, error } = useQuery({
+  const { data, isLoading, isError, error } = useQuery({
     queryKey: ["dataAnimeOngoing"],
     queryFn: getAnimeOngoing,
     staleTime: 1000 * 60 * 60, // 30 menit data di fetch ulang

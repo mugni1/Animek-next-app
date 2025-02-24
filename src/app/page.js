@@ -1,4 +1,3 @@
-import Navbar from "@/components/ui/Navbar";
 import HomeContentPage from "./HomeContent";
 
 export const metadata = {
